@@ -6,6 +6,18 @@ class ToolState {
     makeAutoObservable(this)
   }
 
+  setFillColor(color) {
+    this.tool.fillColor = color
+  }
+
+  setStrokeColor(color) {
+    this.tool.strokeColor = color
+  }
+
+  setLineWidth(width) {
+    this.tool.lineWidth = width
+  }
+
   setTool(tool) {
     this.tool = tool
   }
