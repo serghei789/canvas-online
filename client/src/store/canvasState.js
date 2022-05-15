@@ -2,10 +2,25 @@ const { makeAutoObservable } = require("mobx");
 
 class CanvasState {
   canvas = null
+  socket = null
+  sessionId = null
   undoList = []
   redoList = []
+  userName = ''
   constructor() {
     makeAutoObservable(this)
+  }
+
+  setSocket(socket) {
+    this.socket = socket
+  }
+
+  setSessionId(id) {
+    this.sessionId = id
+  }
+
+  setUserName(name) {
+    this.userName = name
   }
 
   setCanvas (canvas) {
